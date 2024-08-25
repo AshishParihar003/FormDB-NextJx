@@ -96,7 +96,7 @@ interface CustomButtonGroupProps {
 
 const CustomButtonGroup: React.FC<CustomButtonGroupProps> = ({ next, previous }) => {
   return (
-    <div className="flex justify-center items-center py-5 space-x-4">
+    <div className="flex justify-center items-center py-5 space-x-4" data-aos="fade-up" data-aos-delay="500">
       <button onClick={previous} className="bg-orange-400 hover:bg-orange-200 text-black font-bold py-3 px-3 shadow-md rounded-full">
         <i className="fas fa-chevron-left"></i> Previous
       </button>
@@ -123,8 +123,8 @@ export default function CourseContainer() {
   };
 
   return (
-    <div className="container mx-auto py-10">
-      <h1 className={`px-7 mx-auto text-center underline text-6xl font-bold py-8 ${montserrat.className}`}>Courses</h1>
+    <div className="container mx-auto py-10" data-aos="fade-up" data-aos-delay="500">
+      <h1 className={`px-7 mx-auto text-center underline text-7xl font-bold py-8 ${montserrat.className}`} data-aos="fade-up" data-aos-delay="500">Courses</h1>
 
       <Carousel
         responsive={{
@@ -148,21 +148,21 @@ export default function CourseContainer() {
         itemClass="px-4"
       >
         {courses.map((course) => (
-          <div key={course.id} className="bg-white text-black rounded-lg border border-gray-300 shadow-xl px-4 pb-4 pt-2 relative">
+          <div key={course.id} className="bg-white text-black rounded-lg border border-gray-300 shadow-xl px-4 pb-4 pt-2 relative" data-aos="fade-up" data-aos-delay="500">
             <Image className="rounded-lg w-full h-50 object-cover mb-2" src={course.image as StaticImageData} alt={course.title} />
             <div className="p-4 space-y-3">
-              <h6 className={`text-lg font-bold ${montserrat.className}`}>{course.title}</h6>
-              <p className={`text-sm ${inter.className}`}>{course.description}</p>
-              <p className={`text-sm ${inter.className}`}><strong>Duration:</strong> {course.duration}</p>
-              <p className={`text-sm ${inter.className}`}><strong>Fees:</strong> {course.fee}</p>
-              <p className={`text-sm font-semibold ${inter.className}`}>{course.startDate}</p>
-              <p className={`text-sm font-bold ${inter.className}`}>{course.registration}</p>
-              <div className="flex justify-between items-center mt-4 ">
+              <h6 data-aos="fade-up" data-aos-delay="400" className={`text-2xl font-bold  ${montserrat.className}`}>{course.title}</h6>
+              <p data-aos="fade-up" data-aos-delay="400" className={`text-lg  ${inter.className}`}>{course.description}</p>
+              <p data-aos="fade-up" data-aos-delay="400" className={`text-lg  ${inter.className}`}><strong>Duration:</strong> {course.duration}</p>
+              <p data-aos="fade-up" data-aos-delay="400" className={`text-lg  ${inter.className}`}><strong>Fees:</strong> {course.fee}</p>
+              <p data-aos="fade-up" data-aos-delay="400" className={`text-lg  font-semibold ${inter.className}`}>{course.startDate}</p>
+              <p data-aos="fade-up" data-aos-delay="400" className={`text-lg  font-bold ${inter.className}`}>{course.registration}</p>
+              <div data-aos="fade-up" data-aos-delay="400" className="flex  justify-between items-center mt-4">
                 <a href={course.explore}>
-                  <Button className="bg-blue-500 hover:bg-blue-300 items-center text-white rounded px-3 py-3 w-fit text-2xl mx-1">Explore</Button>
+                  <Button data-aos="fade-up" data-aos-delay="400" className="bg-blue-500  hover:bg-blue-300 items-center text-white rounded px-3 py-3 w-fit text-2xl mx-1">Explore</Button>
                 </a>
                 <a href={course.paymentLink}>
-                  <Button className="bg-green-600 hover:bg-green-400 text-white rounded px-2 w-fit py-2 text-sm">Download Syllabus</Button>
+                  <Button data-aos="fade-up" data-aos-delay="400" className="bg-green-600  hover:bg-green-400 text-white rounded px-2 w-fit py-2 text-lg">Download Syllabus</Button>
                 </a>
               </div>
             </div>

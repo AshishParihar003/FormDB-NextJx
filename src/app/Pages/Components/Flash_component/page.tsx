@@ -25,8 +25,8 @@ const FlashMessage = () => {
     >
         <style>{keyframesStyle}</style> {/* Inline keyframes definition */}
         <div className=" space-y-1  md:space-y-0 md:space-x-4 text-center items-center">
-    <h2 className='font-normal text-l sm:text-l'>We Provide Best</h2>
-          <h1 className="px-3 text-2xl md:text-2xl lg:text-2xl font-bold " style={flashStyle}>
+    <h2 className='font-normal text-xl  sm:text-l'>Get Best</h2>
+          <h1 className="px-3 text-2xl md:text-2xl lg:text-3xl font-bold " style={flashStyle}>
            Job Assistance 
           </h1>
         </div>

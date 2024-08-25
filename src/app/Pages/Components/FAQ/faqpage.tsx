@@ -1,43 +1,30 @@
+"use client"
+
+import React from 'react';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // FontAwesome icons for expand/collapse
+import Accordion from './Accordion';
+import { data } from './data';
 
 const FAQ = () => {
-    const data = [
-        {
-            question: "What is the purpose of this application?",
-            answer: "This application is designed to provide a simple and user-friendly interface for users to interact"
-        },
-        {
-            question: "What is the purpose of this application?",
-            answer: "This application is designed to provide a simple and user-friendly interface for users to interact"
-        },
-        {
-            question: "What is the purpose of this applicatdfdfdion?",
-            answer: "This application is designed to provide a simple and user-friendly interface for users to interact"
-        }
-    ]
     return (
-        <>
-        <div>
-            <h1 className=" text-center text-6xl font-bold">FAQ</h1>
-            <div className="text-center h-fit border-2 w-fit p-20 align-content-lg-center justify-center m-10 border-black box-border">
-               {
-                 data.map((details)=> (
-                   
-                        <div key={details.answer}>
-                        <button>
-                           {details.question}
-                        </button>
-                        <i className="fa-solid fa-chevron-down"></i>
-                        <div>
-                            <p className="text-lg">{details.answer}</p>
-                        </div>
-                        </div>
-                    )
-                 )
-               }
-              
-            </div>
+        <div className="w-full min-h-screen bg-gray-100 flex items-center justify-center">
+            <section className=" p-12 rounded-lg max-w-7xl w-full mx-auto shadow-xl border-2">
+                <h1 className="text-6xl font-bold text-center text-black mb-6">
+                Frequently Asked Questions
+                </h1>
+                <div className="space-y-4">
+                    {data.map((d, i) => (
+                        <Accordion
+                            answer={d.answer}
+                            question={d.question}
+                            IsAccordingOpen={d.IsAccordionOpen}
+                            key={i}
+                        />
+                    ))}
+                </div>
+            </section>
         </div>
-        </>
-    )
+    );
 }
-export default FAQ
+
+export default FAQ;

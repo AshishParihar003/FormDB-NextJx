@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import testimonialData from '../Student_Data/data';
@@ -22,42 +20,42 @@ const TestimonialsCards = () => {
   };
 
   return (
-    <div className="bg-black/90 py-12 px-8 rounded-lg" >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-4 sm:p-10">
+    <div className="py-3 px-4 sm:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonialData.map((data, index) => (
-          <div key={data.name} className="bg-black/80 shadow-sm shadow-white p-3 rounded-lg  max-w-md mx-auto">
-            <div className="flex flex-col items-center space-y-4 py-5 px-3 rounded-lg bg-gray-900">
+          <div key={data.name} className="bg-gray-800 shadow-lg rounded-lg p-4 flex flex-col items-center">
+            <Image
+              src={data.image}
+              alt={data.name}
+              className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white/70"
+              width={128}
+              height={128}
+            />
+            <h1 className={`text-xl sm:text-2xl font-bold text-white text-center mt-4 ${montserrat.className}`}>{data.name}</h1>
+            <div className="flex items-center space-x-2 mt-2">
+              <h2 className={`text-lg sm:text-xl text-white font-semibold ${inter.className}`}>{data.companyname}</h2>
               <Image
-                src={data.image}
-                alt={data.name}
-                className="w-32 h-32 rounded-full border-4 border-white/70 "
-               
+                src={data.companylogo}
+                alt={`${data.companyname} logo`}
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full"
+                width={48}
+                height={48}
               />
-              <h1 className={`text-2xl font-bold text-white text-center${montserrat.className}`}>{data.name}</h1>
-              <div className="flex items-center space-x-2">
-                <h2 className={`text-xl text-white font-semibold ${inter.className}`}>{data.companyname}</h2>
-                <Image
-                  src={data.companylogo}
-                  alt={`${data.companyname} logo`}
-                  className="w-12 h-12 rounded-full"
-                  width={48}
-                  height={48}
-                />
-              </div>
-              <div className="text-yellow-400 text-xl">★ ★ ★ ★ ★</div>
-              <p
-                className={`text-gray-300 text-lg font-normal ${inter.className} ${expanded[index] ? 'text-base' : 'text-lg'}`}
-              >
-                {data.description}
-                {/* {expanded[index] ? data.description : `${data.description.substring(0, 100)}...`} */}
-              </p>
-              {/* <button
-                onClick={() => toggleExpand(index)}
-                className="mt-2 text-blue-400 hover:text-blue-600 transition-colors duration-300"
-              >
-                {expanded[index] ? 'Show Less' : 'Show More'}
-              </button> */}
             </div>
+            <div className="text-yellow-400 text-xl mt-2">★ ★ ★ ★ ★</div>
+            <p
+              className={`text-gray-300 text-base sm:text-lg mt-2 ${inter.className}`}
+              style={{ lineHeight: '1.6' }}
+            >
+              {data.description}
+            </p>
+            {/* Uncomment for expand/collapse feature */}
+            {/* <button
+              onClick={() => toggleExpand(index)}
+              className="mt-2 text-blue-400 hover:text-blue-600 transition-colors duration-300"
+            >
+              {expanded[index] ? 'Show Less' : 'Show More'}
+            </button> */}
           </div>
         ))}
       </div>

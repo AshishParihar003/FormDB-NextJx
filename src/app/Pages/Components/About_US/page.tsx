@@ -9,56 +9,57 @@ import Navbar from '../../MainComponets/Header/pages';
 import { WhyUs } from '../Why_Us/Why_us';
 import mission from '@/../../public/assets/lottie/mission.json';
 import Lottie from 'lottie-react';
-import Nandini from '@../../../public/assets/team_detail/saurav.jpg';
+import Nandini from '@../../../public/assets/team_detail/nandini.jpg';
 import Saurav from '@../../../public/assets/team_detail/saurav.jpg';
 import Shubhangi from '@../../../public/assets/team_detail/shubhangi.jpg';
-import Ashish from '@../../../public/assets/team_detail/shubhangi.jpg';
+import Ashish from '@../../../public/assets/team_detail/ashish.jpg';
 import Sonu from '@../../../public/assets/team_detail/shubhangi.jpg';
 import Nitin from '@../../../public/assets/team_detail/shubhangi.jpg';
 
 const TeamsData =[
   {
     id : 1,
+    name: "Sonu Singh",
+    team: "Chief Marketing Officer",
+    description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
+    img : Sonu
+  },
+  {
+    id : 2,
+    name: "Nitin Mukesh",
+    team: "Marketing Head",
+    description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
+    img : Nitin
+  },
+  {
+    id : 3,
     name: "Saurav Ranjan",
     team: "Marketing Team",
     description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnffedkslfm sdklf dsklf dslkindsabufdsjfnuisdn",
     img : Saurav
   },
   {
-    id : 2,
+    id : 4,
     name: "Shubhangi Jha",
     team: "Sales Team",
     description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
     img : Shubhangi
   },
   {
-    id : 3,
+    id : 5,
     name: "Nandini",
     team: "Tech Team",
     description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
     img : Nandini
   },
   {
-    id : 4,
+    id : 6,
     name: "Ashish Parihar",
     team: "Tech Team",
     description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
     img : Ashish
-  },
-  {
-    id : 5,
-    name: "Sonu Singh",
-    team: "Tech Team",
-    description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
-    img : Sonu
-  },
-  {
-    id : 6,
-    name: "Nitin",
-    team: "Tech Team",
-    description : "dsajkfnsdajnidsajnfsdfunsduifndsuinfuidsnfuidsnfindsabufdsjfnuisdn",
-    img : Nitin
   }
+  
 ]
 
 const montserrat = Montserrat({

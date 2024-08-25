@@ -2,14 +2,15 @@
 import pic3 from "@/../../public/assets/student.jpg";
 import pic4 from "@/../../public/assets/shu_img.jpg";
 import pic5 from "@/../../public/assets/student1.jpg";
-import tcs from "@/../../public/assets/working_logo/WNS.png"
+import tcs from "@/../../public/assets/working_logo/tcs.png";
+import ncs from '@../../../public/assets/working_logo/ncs.png'
 
 const testimonialData = [
     {
       name: 'Raj Singh',
       image: pic3,
       companylogo: tcs,
-      companyname:  'WNS',
+      companyname:  'TCS',
 
       description: "I am writing to express my deepest gratitude for your exceptional mentorship and support during my Azure Data Engineering course journey. Your guidance and expertise have been instrumental in not only helping me navigate the complexities of the course but also in securing a new job with a remarkable 50% hike. Through your expert guidance, I was able to grasp complex concepts, overcome challenges, and hone my skills in Azure data engineering. Your practical advice and real-world examples have been invaluable in preparing me for the demands of the industry.",
       aosDelay: "650",
@@ -28,6 +29,22 @@ const testimonialData = [
       companyname:  'ABC',
       image: pic4,
       description: "I am immensely grateful for the exceptional mentorship and guidance provided by Mr. Arun Kumar during my journey into Azure data engineering. With his invaluable support, I not only gained a deeper understanding of Azure technologies but also secured a new job with an incredible hike. Thanks to Arun sir's mentorship I was able to navigate the complexities of the Azure platform with ease and confidence. His encouragement and support were instrumental in helping me secure a job opportunity that far exceeded my expectations lorem10.",
+      aosDelay: "650",
+    },
+    {
+      name: 'Diptanu',
+      companylogo: pic3,
+      companyname:  'ABC',
+      image: pic5,
+      description: "Joining Forumde has been a transformative experience for me. With their exceptional data engineering solutions and support, I was able to achieve remarkable career growth. In just one year, I received a 200% salary hike at Circle K, thanks to the enhanced skills and insights I gained. I am particularly grateful to Mentor Arun Kumar, whose guidance and expertise were pivotal in this journey. Forumde’s platform and Arun’s mentorship played a crucial role in this success, and I’m incredibly thankful for the opportunities it has opened up.",
+      aosDelay: "650",
+    },
+    {
+      name: 'Priya',
+      companylogo: ncs,
+      companyname:  'NCS',
+      image: pic5,
+      description: "Joining Forumde has been a transformative experience for me. With their exceptional data engineering solutions and support, I was able to achieve remarkable career growth. In just one year, I received a 200% salary hike at Circle K, thanks to the enhanced skills and insights I gained. I am particularly grateful to Mentor Arun Kumar, whose guidance and expertise were pivotal in this journey. Forumde’s platform and Arun’s mentorship played a crucial role in this success, and I’m incredibly thankful for the opportunities it has opened up.",
       aosDelay: "650",
     }
   ];
