@@ -6,7 +6,6 @@ import ProfileImage from "@/../../public/assets/ProfileImage.png";
 import Image from 'next/image';
 import { Montserrat, Noto_Serif } from 'next/font/google';
 import './Aboutus.css';
-import { WhyUs } from '../Why_Us/Why_us';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
