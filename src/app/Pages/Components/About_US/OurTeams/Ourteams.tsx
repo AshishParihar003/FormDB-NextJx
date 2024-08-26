@@ -20,11 +20,11 @@ export default function TeamSection() {
         {TeamsData.map((data) => (
           <div key={data.id} className='flex flex-col border-2 rounded-lg md:w-fit h-fit w-fit'>
             <div className='w-full'>
-              <Image src={data.img} alt={data.name} className='object-cover rounded-t-lg w-2/3 h-40' />
+              <Image src={data.img} alt={data.name} className='object-cover rounded-t-lg w-fit h-40' />
             </div>
             <div className='p-4'>
-              <h1 className='text-lg font-bold'>{data.name}</h1>
-              <h2 className='text-md font-semibold text-gray-600'>{data.team}</h2>
+              <h1 className='text-lg font-extrabold'>{data.name}</h1>
+              <h2 className='text-md font-bold text-gray-600'>{data.team}</h2>
               <p className='mt-2 text-sm'>{data.description}</p>
             </div>
           </div>
