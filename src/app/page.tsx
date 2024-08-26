@@ -9,8 +9,7 @@ import { Footer } from "./Pages/MainComponets/Footer/page";
 import Navbar from "./Pages/MainComponets/Header/pages";
 import Upcoming from "./Pages/Components/Upcoming_Course/pages";
 import Companies from "./Pages/Additional/Companies/pages";
-import ContactUsButtons from "./Pages/Components/ContactUS/contactpage";
-
+import ContactUsButtons from "./Pages/Components/ContactUS/contactpage"
 
 export default function Home() {
   return (

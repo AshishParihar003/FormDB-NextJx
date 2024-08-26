@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 const ContactButtonsData = [
@@ -20,7 +20,7 @@ const ContactButtonsData = [
 ];
 
 const ContactUsButtons = () => {
-  const [copiedNumber, setCopiedNumber] = useState();
+  const [copiedNumber, setCopiedNumber] = useState(null);
 
   const handleCopy = (number) => {
     navigator.clipboard.writeText(number);
@@ -29,20 +29,19 @@ const ContactUsButtons = () => {
   };
 
   return (
-    <div className='grid grid-cols-3 px-4 space-x-2 py-3'>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 text-center">
       {ContactButtonsData.map((contact) => (
         <div 
           key={contact.id} 
-          className='border-3 bg-green-200 rounded-2xl p-3 border-black text-center'
+          className="bg-white border hover:bg-green-300  border-gray-300 rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105 hover:shadow-xl cursor-pointer"
+          onClick={() => handleCopy(contact.Phonenumber)}
         >
-          <p className='text-2xl font-semibold'>{contact.name}</p>
+          <p className="text-xl font-semibold mb-2 text-gray-800">{contact.name}</p>
           <p 
-            className={`text-2xl cursor-pointer hover:text-red-500 ${copiedNumber === contact.Phonenumber ? 'text-blue-700' : ''}`}
-            onClick={() => handleCopy(contact.Phonenumber)}
+            className={`text-lg font-medium ${copiedNumber === contact.Phonenumber ? 'text-blue-600' : 'text-gray-600'} transition-colors hover:scale-100 hover:text-red-600`}
           >
             {contact.Phonenumber}
           </p>
-          
         </div>
       ))}
     </div>
@@ -50,4 +49,6 @@ const ContactUsButtons = () => {
 }
 
 export default ContactUsButtons;
- 
+
+
+// transition-transform transform hover:scale-105 hover:shadow-xl
