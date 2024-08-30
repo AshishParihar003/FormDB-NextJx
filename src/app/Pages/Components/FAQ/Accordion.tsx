@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa'; // FontAwesome icons
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 type Props = {
     IsAccordingOpen: boolean;
@@ -10,13 +10,13 @@ type Props = {
     answer: string;
 };
 
-const Accordion: React.FC<Props> = (props) => {
+const Accordion: React.FC<Props> = ({ IsAccordingOpen, question, answer }) => {
     const [animationParent] = useAutoAnimate();
-    const [isAccordionOpen, setAccordion] = useState(props.IsAccordingOpen || false);
+    const [isAccordionOpen, setAccordion] = useState(IsAccordingOpen || false);
 
     const toggleAccordion = () => {
         setAccordion(!isAccordionOpen);
-    }
+    };
 
     return (
         <div ref={animationParent} className="border-b pt-4 border-gray-500">
@@ -24,7 +24,7 @@ const Accordion: React.FC<Props> = (props) => {
                 onClick={toggleAccordion}
                 className="flex justify-between items-center p-5 cursor-pointer hover:bg-blue-400 transition-colors"
             >
-                <span className="text-2xl font-semibold">{props.question}</span>
+                <span className="text-2xl font-semibold">{question}</span>
                 {isAccordionOpen ? (
                     <FaChevronUp className="text-gray-600" />
                 ) : (
@@ -32,12 +32,12 @@ const Accordion: React.FC<Props> = (props) => {
                 )}
             </div>
             {isAccordionOpen && (
-                <div className="p-4 bg-white">
-                    <p className="text-gray-700">{props.answer}</p>
+                <div className="p-4 bg-gray-200">
+                    <p className="text-gray-700">{answer}</p>
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
 export default Accordion;

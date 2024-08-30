@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import mission from '@/assets/mission.json';
+import mission from '@/../../public/assets/lottie/vision.json';
 import { Noto_Serif } from 'next/font/google';
 
 const inter = Noto_Serif({

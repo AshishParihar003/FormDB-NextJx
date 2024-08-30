@@ -8,7 +8,9 @@ import Navbar from "../../MainComponets/Header/pages";
 import Lottie from "lottie-react";
 import Companies from "../../Additional/Companies/pages";
 import TestimonialsCards from "./StudentCard/Testrimonials";
-import { Footer } from "../../MainComponets/Footer/page";
+import { Footer } from "../../MainComponets/Footer/footerpage";
+//import testimonialData from "@/../../src/app/Pages/Data/testimonialsdata"
+// Importing logo images
 
 // Initializing custom fonts
 const montserrat = Montserrat({
@@ -38,8 +40,8 @@ const Testimonials = () => {
       <Navbar />
 
       {/* Full-page Hero Section */}
-      <div className="relative h-screen bg-black/90 text-white flex flex-col lg:flex-row items-center lg:pt-60 lg:items-start justify-center lg:justify-between p-5 mt-12 lg:p-10">
-        <div className="flex-1 flex flex-col items-start justify-center lg:py-10 lg:px-10 space-y-4 lg:space-y-5 text-left z-10">
+      <div className="relative h-screen bg-black/90 text-white flex flex-col lg:flex-row items-center lg:pt-44 lg:items-start justify-center lg:justify-between p-5 mt-12 lg:p-10">
+        <div className="flex-1 flex flex-col items-start justify-center lg:px-10 space-y-2 lg:space-y-3 text-left z-10">
           <div className={`text-3xl sm:text-4xl md:text-5xl lg:text-5xl pt-20 font-medium ${montserrat.className}`}>
             Welcome,
           </div>
@@ -50,6 +52,8 @@ const Testimonials = () => {
             Celebrate the exceptional individuals who have made outstanding contributions to our community. Our Hall of Fame honors those whose achievements, leadership, and dedication have significantly advanced the field. Discover their stories and recognize their impact.
           </h2>
         </div>
+        <br />
+        <br /><br />
         <div className="flex-1 flex items-center justify-center lg:justify-end px-5 lg:px-5">
           <Lottie {...defaultOptions} className="w-full p-5" />
         </div>

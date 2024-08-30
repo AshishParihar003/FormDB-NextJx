@@ -38,9 +38,7 @@ export function Footer() {
               <div>
                 <h1 className="text-2xl font-bold mt-10 text-white">ForumDE</h1>
                 <h5 className="text-xl font-semibold text-gray-300">Simplifying Technology For You.</h5>
-                {/* <h6 className="mt-2 text-gray-300">
-                ForumDE has transformed and simplified tech education for students and professionals. It is now a leading website and institution for quality content, guidance, and teaching in technology.
-                </h6> */}
+              
               </div>
 
               <div>

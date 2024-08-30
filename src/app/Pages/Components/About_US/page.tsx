@@ -8,62 +8,60 @@ import { Montserrat, Noto_Serif } from 'next/font/google';
 import Navbar from '../../MainComponets/Header/pages';
 import { WhyUs } from '../Why_Us/Why_us';
 import mission from '@/../../public/assets/lottie/mission.json';
-import vision from '@../../../public/assets/lottie/vision.json';
+import vision from '@/../../public/assets/lottie/vision.json';
 import Lottie from 'lottie-react';
-import Nandini from '@../../../public/assets/team_detail/nandini.jpg';
-import Saurav from '@../../../public/assets/team_detail/saurav.jpg';
-import Shubhangi from '@../../../public/assets/team_detail/shubhangi.jpg';
-import Ashish from '@../../../public/assets/team_detail/ashish.jpg';
-import Sonu from '@../../../public/assets/team_detail/sonu.jpg';
-import Nitin from '@../../../public/assets/team_detail/nitin.jpg';
-import { Footer } from '../../MainComponets/Footer/page';
+import Nandini from '@/../../public/assets/team_detail/nandini.jpg';
+import Saurav from '@/../../public/assets/team_detail/saurav.jpg';
+import Shubhangi from '@/../../public/assets/team_detail/shubhangi.jpg';
+import Ashish from '@/../../public/assets/team_detail/ashish.jpg';
+import Sonu from '@/../../public/assets/team_detail/sonu.jpg';
+import Nitin from '@/../../public/assets/team_detail/nitin.jpg';
+import { Footer } from '../../MainComponets/Footer/footerpage';
 
-const TeamsData =[
+const TeamsData = [
   {
-    id : 1,
+    id: 1,
     name: "Sonu Singh",
     team: "Chief Marketing Officer",
-    description : "",
-    img : Sonu
+    description: "",
+    img: Sonu
   },
   {
-    id : 2,
+    id: 2,
     name: "Nitin Mukesh",
     team: "Marketing Head",
-    description : "",
-    img : Nitin
+    description: "",
+    img: Nitin
   },
   {
-    id : 3,
+    id: 3,
     name: "Saurav Ranjan",
     team: "Marketing Team",
-    description : "",
-    img : Saurav
+    description: "",
+    img: Saurav
   },
   {
-    id : 4,
+    id: 4,
     name: "Shubhangi Jha",
     team: "Sales Team",
-    description : "",
-    img : Shubhangi
+    description: "",
+    img: Shubhangi
   },
   {
-    id : 5,
-    name: "Ashish Parihar",
-    team: "Tech Team",
-    description : "",
-    img : Ashish
-  },
-  {
-    id : 6,
+    id: 5,
     name: "Nandini",
     team: "Tech Team",
-    description : "",
-    img : Nandini
+    description: "",
+    img: Nandini
   },
-  
-  
-]
+  {
+    id: 6,
+    name: "Ashish Parihar",
+    team: "Tech Team",
+    description: "",
+    img: Ashish
+  }
+];
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -123,7 +121,7 @@ export default function AboutUs() {
     
       <div data-aos="fade-up" className="container mx-auto px-4 md:px-8 py-6 md:py-10 mt-10">
         {/* Introduction Section */}
-        <section className="bg-orange-300 rounded-xl shadow-xl p-6 md:p-12 mt-5">
+        <section className="bg-orange-300 rounded-xl shadow-xl p-6 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="md:col-span-1">
               <Image src={ProfileImage} alt="Profile" className="w-full h-auto rounded-3xl shadow-2xl shadow-orange-400" />
@@ -154,7 +152,7 @@ export default function AboutUs() {
         <section className="mt-10">
           <h1 className={`text-center text-4xl md:text-6xl font-bold underline ${montserrat.className}`}>Our Mission</h1>
           <div className="flex flex-wrap mt-8 items-center">
-            <div className={`w-full md:w-2/3 lg:w-1/2 text-2xl p-6 ${inter.className}`}>
+            <div className={`w-full md:w-2/3 lg:w-1/2 text-lg p-6 ${inter.className}`}>
               <p>At ForumDE, our mission is to empower and support students in mastering data engineering by providing a collaborative platform for learning, sharing knowledge, and solving real-world challenges. We aim to foster a community where aspiring data engineers can gain practical insights, access valuable resources, and connect with peers and industry experts to build the skills necessary for a successful career in data engineering.</p>
             </div>
             <div className="w-full md:w-1/3 lg:w-1/2">
@@ -167,7 +165,7 @@ export default function AboutUs() {
         <section className="mt-10">
           <h1 className={`text-center text-4xl md:text-6xl font-bold underline ${montserrat.className}`}>Our Vision</h1>
           <div className="flex flex-wrap mt-8 items-center">
-            <div className={`w-full md:w-2/3 lg:w-1/2 text-2xl p-6 ${inter.className}`}>
+            <div className={`w-full md:w-2/3 lg:w-1/2 text-lg p-6 ${inter.className}`}>
               <p>Our vision is to help students achieve the highest career growth with the support of industry-led mentors. This includes creating personalized learning paths, ensuring industry-relevant skills, tracking performance, and aligning with market trends to prepare students for a successful career in data engineering.</p>
             </div>
             <div className="w-full md:w-1/3 lg:w-1/2">
@@ -177,12 +175,12 @@ export default function AboutUs() {
         </section>
 
         {/* Teams Section */}
-        <section className="mt-10 ">
+        <section className="mt-10">
           <h1 className="text-center text-4xl md:text-6xl font-bold underline">Meet Our Team</h1>
-          <div className="mt-8 flex flex-col md:flex-row border-2 p-5  gap-6">
+          <div className="mt-8 flex flex-col md:flex-row gap-6">
             {TeamsData.map((data) => (
-              <div key={data.id} className='flex flex-col border-gray-700 border-3 rounded-lg hover:bg-orange-400 overflow-hidden shadow-md'>
-                <Image src={data.img} alt={data.name} className='w-full h-60 object-cover' />
+              <div key={data.id} className='flex flex-col border border-gray-200 rounded-lg overflow-hidden shadow-md'>
+                <Image src={data.img} alt={data.name} className='w-full h-64 object-cover' />
                 <div className='p-4'>
                   <h2 className='text-lg font-bold'>{data.name}</h2>
                   <h3 className='text-md font-semibold text-gray-600'>{data.team}</h3>
@@ -193,7 +191,7 @@ export default function AboutUs() {
           </div>
         </section>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

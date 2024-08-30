@@ -1,13 +1,13 @@
 import CustomMarquee from "./Pages/Components/Marquee/Marquee";
-import CourseContainer from "./Pages/Components/Course/Course";
+import CourseContainer from "./Pages/Components/Course/PageCourse";
 import MyCertificate from "./Pages/Components/Certificate/Certificate";
-import Mentors from "./Pages/Components/Mentor/Mentors";
+import Mentors from "./Pages/Components/Mentor/page";
 import Video from "./Pages/Components/Video/Video";
 import Logo_Marquee from "./Pages/Components/Logo_Marquee/Logo_Marquee";
-import Details from "./Pages/Components/Details/Page";
-import { Footer } from "./Pages/MainComponets/Footer/page";
+import Details from "./Pages/Components/Details/Detailspage";
+import { Footer } from "./Pages/MainComponets/Footer/footerpage";
 import Navbar from "./Pages/MainComponets/Header/pages";
-import Upcoming from "./Pages/Components/Upcoming_Course/pages";
+import Upcoming from "./Pages/Components/Upcoming_Course/upcomingpages";
 import Companies from "./Pages/Additional/Companies/pages";
 import ContactUsButtons from "./Pages/Components/ContactUS/contactpage"
 import FAQ from "./Pages/Components/FAQ/faqpage";

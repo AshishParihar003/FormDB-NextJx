@@ -20,9 +20,9 @@ const ContactButtonsData = [
 ];
 
 const ContactUsButtons = () => {
-  const [copiedNumber, setCopiedNumber] = useState(null);
+  const [copiedNumber, setCopiedNumber] = useState<string>(''); //intially it should be empty now it is 
 
-  const handleCopy = (number) => {
+  const handleCopy = (number: string) => {
     navigator.clipboard.writeText(number);
     setCopiedNumber(number);
     alert(`Phone number ${number} copied to clipboard!`);

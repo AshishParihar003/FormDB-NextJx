@@ -3,7 +3,10 @@
         {
             question: "What is Forumde?",
             answer: "Forumde is an online learning platform offering comprehensive courses in Azure Data Engineering, SQL, and Python. Our mission is to provide high-quality education and practical skills to help you advance in data engineering and programming",
+
             IsAccordionOpen: false
+
+        
         },
         {
             question: "How do I enroll in a course?",
